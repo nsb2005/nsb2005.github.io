@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>JavaJam Coffee House Jobs</title>
+        <link rel="stylesheet" href="javajam.css">
+    </head>
+    <body>
+        <div id="wrapper">
+        <header>
+            <h1>JavaJam Coffee House Jobs</h1>
+        </header>
+        <nav>
+            <ul>
+            <li><a href='index.html'>Home</a></li>   
+                <li><a href='menu.html'>Menu</a></li>
+                <li><a href='music.html'>Music</a></li>
+                <li><a href='jobs.html'>Jobs</a></li>
+            </ul>    
+        </nav>
+        <main>
+            <div id="herojobs"></div>
+            <h2>Jobs at JavaJam</h2>
+            <p>
+                Want to work at JavaJam? Fill out the form below to start yourapplication.
+            </p>
+            <form action="jobsreturnvalue.html">
+                <label for="myName">Name:</label>
+                <input type="text" id="myName" name="myName" required>
+            
+
+                <label for="myEmail">Email:</label>
+                <input type="email" id="myEmail" name="myEmail" required>
+
+                <label for="myExprience">Exprience:</label>
+                <textarea type="text" id="myExperience" name="myExperience" rows="2" cols="20" required></textarea>
+
+                <input type="submit" value="Apply Now" id="mySubmit" onclick="getData()">
+                <input type="Reset" value="Reset" id="myReset">
+            </form>
+            <script>
+                function getData()
+                {
+                    //get the value from the foem above
+                    var value1=document.getElementById("myName").value;
+                    var value2=document.getElementById("myEmail").value;
+                    var value3=document.getElementById("myExperience").value;
+
+                    //save the data in browser's local storage
+                    localStorage.setItem("txtValue1",value1)
+                    localStorage.setItem("txtValue2",value2)
+                    localStorage.setItem("txtValue3",value3)
+                }
+            </script>
+               
+        </main>
+        <br>
+        <footer>
+            Copyright © 2018 JavaJam Coffee House<br>
+            <a href="mailto:toewguosheng@gmail.com">toewguosheng@gmail.com</a>
+        </footer>
+    </div>                 
+    </body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>JavaJam Coffee House Jobs</title>
+        <link rel="stylesheet" href="javajam.css">
+    </head>
+    <body>
+        <div id="wrapper">
+        <header>
+            <h1>JavaJam Coffee House Jobs</h1>
+        </header>
+        <nav>
+            <ul>
+            <li><a href='index.html'>Home</a></li>   
+                <li><a href='menu.html'>Menu</a></li>
+                <li><a href='music.html'>Music</a></li>
+                <li><a href='jobs.html'>Jobs</a></li>
+            </ul>    
+        </nav>
+        <main>
+            <div id="herojobs"></div>
+            <h2>Jobs at JavaJam</h2>
+            <p>
+                Your name is :<span id="name1"></span><br>
+                Your email is :<span id="email1"></span><br>
+                Your exprience is :<span id="exp1"></span><br>
+            </p>
+            
+            <script>
+                //retrieve data from browser's local storage & assign to each <span>
+                document.getElementById("name1").innerHTML=localStorage.getItem("txtValue1");
+                document.getElementById("email1").innerHTML=localStorage.getItem("txtValue2");
+                document.getElementById("exp1").innerHTML=localStorage.getItem("txtValue3"); 
+                
+            </script>
+               
+        </main>
+        <br>
+        <footer>
+            Copyright © 2018 JavaJam Coffee House<br>
+            <a href="mailto:toewguosheng@gmail.com">toewguosheng@gmail.com</a>
+        </footer>
+    </div>                 
+    </body>
+</html>
